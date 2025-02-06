@@ -16,7 +16,7 @@
     animation: fadeIn 1.5s ease-in-out;
   }
   
-  /* Grid Layout */
+ 
   .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -24,8 +24,7 @@
     justify-content: center;
     padding: 10px;
   }
-  
-  /* Card Styling */
+
   .product-card {
     width: 100%;
     max-width: 350px;
@@ -35,17 +34,17 @@
     background: white;
     overflow: hidden;
     position: relative;
+    height: 300px;
   }
   
   .product-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
   }
-  
-  /* Image Container */
+
   .image-container {
     overflow: hidden;
-    /* border-radius: 15px 15px 0 0; */
+    
   }
   
   .product-image {

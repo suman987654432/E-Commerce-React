@@ -6,5 +6,26 @@
     color: #f8d210;
     text-decoration: underline;
   }
-
+  .cart-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .cart-count {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
   
