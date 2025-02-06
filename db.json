@@ -4,61 +4,71 @@
         "id": 1,
         "name": "iPhone 15 Pro Max",
         "description": "6.7-inch Super Retina XDR display, A17 Pro chip, 48MP main camera, Titanium design.",
-        "image": "https://m.media-amazon.com/images/I/81fxjeu8fdL._SX679_.jpg"
+        "image": "https://m.media-amazon.com/images/I/81fxjeu8fdL._SX679_.jpg",
+        "price":"75,000"
       },
       {
         "id": 2,
         "name": "Samsung Galaxy S23 Ultra",
         "description": "6.8-inch QHD+ Dynamic AMOLED 2X, Snapdragon 8 Gen 2, 200MP camera, S-Pen support.",
-        "image": "https://m.media-amazon.com/images/I/61sU8OqBs4L._AC_UF1000,1000_QL80_FMwebp_.jpg"
+        "image": "https://m.media-amazon.com/images/I/61sU8OqBs4L._AC_UF1000,1000_QL80_FMwebp_.jpg",
+        "price":"45,000"
       },
       {
         "id": 3,
         "name": "OnePlus 11 5G",
         "description": "6.7-inch AMOLED display, Snapdragon 8 Gen 2, Hasselblad triple camera, 100W fast charging.",
-        "image": "https://m.media-amazon.com/images/I/61amb0CfMGL._AC_UF1000,1000_QL80_FMwebp_.jpg"
+        "image": "https://m.media-amazon.com/images/I/61amb0CfMGL._AC_UF1000,1000_QL80_FMwebp_.jpg",
+        "price":"85,000"
       },
       {
         "id": 4,
         "name": "Google Pixel 7 Pro",
         "description": "6.7-inch OLED, Google Tensor G2, 50MP triple camera, Android 13.",
-        "image": "https://m.media-amazon.com/images/I/61z87QgLJ0L._AC_UF1000,1000_QL80_FMwebp_.jpg"
+        "image": "https://m.media-amazon.com/images/I/61z87QgLJ0L._AC_UF1000,1000_QL80_FMwebp_.jpg",
+        "price":"25,000"
       },
       {
         "id": 5,
         "name": "Xiaomi 13 Pro",
         "description": "6.73-inch AMOLED, Snapdragon 8 Gen 2, Leica 50MP camera, 120W fast charging.",
-        "image": "https://m.media-amazon.com/images/I/71ccoZNHoiL._AC_SL1500_.jpg"
+        "image": "https://m.media-amazon.com/images/I/71ccoZNHoiL._AC_SL1500_.jpg",
+        "price":"35,000"
       },
       {
         "id": 6,
         "name": "Asus ROG Phone 7",
         "description": "6.78-inch AMOLED, Snapdragon 8 Gen 2, 165Hz refresh rate, 6000mAh battery.",
-        "image": "https://m.media-amazon.com/images/I/61FfVWSqGrL._AC_SL1500_.jpg"
+        "image": "https://m.media-amazon.com/images/I/61FfVWSqGrL._AC_SL1500_.jpg",
+        "price":"55,000"
       },
       {
         "id": 7,
         "name": "Realme GT 3",
         "description": "6.74-inch AMOLED, Snapdragon 8+ Gen 1, 240W fast charging, 50MP main camera.",
-        "image": "https://m.media-amazon.com/images/I/81a+bD9Ts6L._AC_UF1000,1000_QL80_FMwebp_.jpg"
+        "image": "https://m.media-amazon.com/images/I/81a+bD9Ts6L._AC_UF1000,1000_QL80_FMwebp_.jpg",
+        "price":"15,000"
       },
       {
         "id": 8,
         "name": "Vivo X90 Pro",
         "description": "6.78-inch AMOLED, MediaTek Dimensity 9200, 1-inch 50MP main sensor, 120W charging.",
-        "image": "https://m.media-amazon.com/images/I/71chuQByj0L._AC_UF1000,1000_QL80_FMwebp_.jpg"
+        "image": "https://m.media-amazon.com/images/I/71chuQByj0L._AC_UF1000,1000_QL80_FMwebp_.jpg",
+        "price":"65,000"
       },
       {
         "id": 9,
         "name": "Sony Xperia 1 V",
         "description": "6.5-inch 4K OLED, Snapdragon 8 Gen 2, triple 12MP cameras, 3.5mm jack.",
-        "image": "https://m.media-amazon.com/images/I/7191m+RPB4L._AC_SL1500_.jpg"
+        "image": "https://m.media-amazon.com/images/I/7191m+RPB4L._AC_SL1500_.jpg",
+        "price":"35,000"
       },
       {
         "id": 10,
         "name": "Motorola Edge 40 Pro",
         "description": "6.67-inch OLED, Snapdragon 8 Gen 2, 165Hz refresh rate, 125W fast charging.",
-        "image": "https://m.media-amazon.com/images/I/715aoVxQNTL._AC_SL1500_.jpg"
+        "image": "https://m.media-amazon.com/images/I/715aoVxQNTL._AC_SL1500_.jpg",
+        "price":"40,000"
       }
     ]
   }

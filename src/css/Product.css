@@ -1,0 +1,136 @@
+
+.product-container {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f8f9fa;
+  }
+  
+
+  .title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #343a40;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  /* Grid Layout */
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    padding: 10px;
+  }
+  
+  /* Card Styling */
+  .product-card {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    background: white;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Image Container */
+  .image-container {
+    overflow: hidden;
+    /* border-radius: 15px 15px 0 0; */
+  }
+  
+  .product-image {
+    height: 250px;
+    object-fit: cover;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .product-card:hover .product-image {
+    transform: scale(1.1);
+  }
+  
+  /* Name & Description */
+  .product-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #212529;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .product-card:hover .product-name {
+    color: #007bff;
+  }
+  
+  .product-description {
+    font-size: 1rem;
+    color: #6c757d;
+    /* height: 60px; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  /* Price */
+  .product-price {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #ff6b6b;
+    margin-top: 0px;
+    animation: priceGlow 2s infinite alternate;
+  }
+  .truncate{
+    color: #ff0a0a;
+    background-color: #98e173;
+   padding: 10px;
+   border-radius: 10px;
+
+  }
+  .truncate:hover{
+background-color: aqua;
+  }
+  
+  /* Price Glow Animation */
+  @keyframes priceGlow {
+    0% { color: #ff6b6b; }
+    100% { color: #ff3b3b; }
+  }
+  
+  /* Button Container */
+  .card-actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+  }
+  
+  /* Button Styling */
+  .btn {
+    flex: 1;
+    margin: 5px;
+    padding: 12px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  
+  
+  
+  
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
