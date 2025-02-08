@@ -7,7 +7,8 @@ import { IoCart } from "react-icons/io5";
 import { useSelector } from "react-redux";
 
 const TopMenu = () => {
-  const cartCount = useSelector((state) => state.cart.totalQuantity);
+  const CartData = useSelector((state) => state.mycart.cart);
+  const cartLength = CartData.length;
 
   return (
     <Navbar bg="dark" variant="dark" expand="lg" style={{ padding: "10px" }}>
@@ -25,7 +26,7 @@ const TopMenu = () => {
 
             <Nav.Link as={Link} to="/cart" className="cart-link">
               <IoCart style={{ height: "30px", width: "30px" }} />
-              {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
+             <span className="cart-count">{cartLength}</span>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
