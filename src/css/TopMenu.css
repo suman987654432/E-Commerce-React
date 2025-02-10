@@ -1,31 +1,83 @@
+/* General Navbar Styling */
+.navbar {
+  background-color: #343a40 !important;
+  padding: 10px;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: Highlight !important;
+}
+
+/* Navigation Links */
 .nav-link-custom {
-    color: #fff;
-    transition: all 0.3s ease-in-out;
-  }
-  .nav-link-custom:hover {
-    color: #f8d210;
-    text-decoration: underline;
-  }
-  .cart-link {
-    position: relative;
-    display: flex;
-    align-items: center;
-  }
-  
-  .cart-count {
-    position: absolute;
-    top: -8px;
-    right: -10px;
-    background-color: red;
-    color: white;
-    font-size: 12px;
-    font-weight: bold;
+  font-size: 1.1rem;
+  color: white !important;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link-custom:hover {
+  color: #f8d210 !important;
+  text-decoration: underline;
+}
+
+/* Cart and Wishlist Links */
+.cart-link,
+.wish-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 1.2rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.cart-link:hover,
+.wish-link:hover {
+  color: #f8f9fa;
+}
+
+/* Cart and Wishlist Icons */
+.cart-icon,
+.wish-icon {
+  height: 30px;
+  width: 30px;
+}
+
+.wish-link img {
+  height: 30px;
+  width: 30px;
+  margin-left: 8px;
+}
+
+/* Cart and Wishlist Counters */
+.cart-count,
+.wish-count {
+  position: absolute;
+  top: -5px;
+  right: -8px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .cart-count,
+  .wish-count {
     width: 18px;
     height: 18px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-size: 10px;
+    top: -4px;
+    right: -6px;
   }
-  
-  
+}
