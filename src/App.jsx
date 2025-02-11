@@ -7,6 +7,9 @@ import Checkout from "./pages/Checkout";
 import DetailPage from "./pages/DetailPage";
 import WishlistPage from "./pages/WishlistPage";
 import Confirm from "./pages/Confirm";
+import Search from "./components/Search";
+import SignUp from "./components/SignUp";
+import Login from "./components/LogIn";
 
 
 const App = () => {
@@ -25,6 +28,9 @@ const App = () => {
             <Route path="/product/:id" element={<DetailPage />} />
             <Route path="/wishlist" element={<WishlistPage />} />
             <Route path="/confirm" element={<Confirm />} />
+            <Route path="/search" element={<Search />} />
+            <Route path="/registration" element={<SignUp />} />
+            <Route path="/login" element={<Login />} />
           </Route>
 
         </Routes>

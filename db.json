@@ -88,5 +88,14 @@
       "image": "https://m.media-amazon.com/images/I/715aoVxQNTL._AC_SL1500_.jpg",
       "price": 40000
     }
+  ],
+  "User": [
+    {},
+    {
+      "id": "d014",
+      "name": "Suman Singh",
+      "email": "sumitqaj9876@gmail.com",
+      "password": "1234"
+    }
   ]
 }

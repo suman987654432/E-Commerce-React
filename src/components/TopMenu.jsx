@@ -25,7 +25,7 @@ const wishLength = WishData.length;
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto" style={{ fontSize: "1.1rem", gap: "15px" }}>
             <Nav.Link as={Link} to="/home" className="nav-link-custom">Home</Nav.Link>
-            <Nav.Link as={Link} to="/login" className="nav-link-custom">Log in</Nav.Link>
+            <Nav.Link as={Link} to="/search" className="nav-link-custom">Search</Nav.Link>
             <Nav.Link as={Link} to="/product" className="nav-link-custom">Product</Nav.Link>
             <Nav.Link as={Link} to="/registration" className="nav-link-custom">SignUp</Nav.Link>
 

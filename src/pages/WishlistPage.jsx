@@ -8,6 +8,7 @@ const WishlistPage = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate(); // Hook for navigation
 
+ 
   return (
     <div style={styles.container}>
       <h1 style={styles.heading}>Your Wishlist ❤️</h1>
