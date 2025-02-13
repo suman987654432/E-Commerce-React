@@ -1,7 +1,7 @@
 {
   "smartphones": [
     {
-      "id": 1,
+      "id": "1",
       "name": "iPhone 15 Pro Max",
       "category": "Apple",
       "description": "6.7-inch Super Retina XDR display, A17 Pro chip, 48MP main camera, Titanium design.",
@@ -9,7 +9,7 @@
       "price": 75000
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Samsung Galaxy S23 Ultra",
       "category": "Samsung",
       "description": "6.8-inch QHD+ Dynamic AMOLED 2X, Snapdragon 8 Gen 2, 200MP camera, S-Pen support.",
@@ -17,7 +17,7 @@
       "price": 45000
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "OnePlus 11 5G",
       "category": "OnePlus",
       "description": "6.7-inch AMOLED display, Snapdragon 8 Gen 2, Hasselblad triple camera, 100W fast charging.",
@@ -25,7 +25,7 @@
       "price": 85000
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Google Pixel 7 Pro",
       "category": "Google",
       "description": "6.7-inch OLED, Google Tensor G2, 50MP triple camera, Android 13.",
@@ -33,7 +33,7 @@
       "price": 25000
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Xiaomi 13 Pro",
       "category": "Xiaomi",
       "description": "6.73-inch AMOLED, Snapdragon 8 Gen 2, Leica 50MP camera, 120W fast charging.",
@@ -41,7 +41,7 @@
       "price": 35000
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "Asus ROG Phone 7",
       "category": "Asus",
       "description": "6.78-inch AMOLED, Snapdragon 8 Gen 2, 165Hz refresh rate, 6000mAh battery.",
@@ -49,7 +49,7 @@
       "price": 55000
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "Realme GT 3",
       "category": "Realme",
       "description": "6.74-inch AMOLED, Snapdragon 8+ Gen 1, 240W fast charging, 50MP main camera.",
@@ -57,7 +57,7 @@
       "price": 15000
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "Vivo X90 Pro",
       "category": "Vivo",
       "description": "6.78-inch AMOLED, MediaTek Dimensity 9200, 1-inch 50MP main sensor, 120W charging.",
@@ -65,7 +65,7 @@
       "price": 65000
     },
     {
-      "id": 9,
+      "id": "9",
       "name": "Sony Xperia 1 V",
       "category": "Sony",
       "description": "6.5-inch 4K OLED, Snapdragon 8 Gen 2, triple 12MP cameras, 3.5mm jack.",
@@ -73,7 +73,7 @@
       "price": 35000
     },
     {
-      "id": 10,
+      "id": "10",
       "name": "Motorola Edge 40 Pro",
       "category": "Motorola",
       "description": "6.67-inch OLED, Snapdragon 8 Gen 2, 165Hz refresh rate, 125W fast charging.",
@@ -81,7 +81,7 @@
       "price": 40000
     },
     {
-      "id": 11,
+      "id": "11",
       "name": "Motorola Edge 40",
       "category": "Motorola",
       "description": "6.67-inch OLED, Snapdragon 8 Gen 2, 165Hz refresh rate, 125W fast charging.",
@@ -90,12 +90,72 @@
     }
   ],
   "User": [
-    {},
+    {
+      "id": "db23"
+    },
     {
       "id": "d014",
       "name": "Suman Singh",
       "email": "sumitqaj9876@gmail.com",
       "password": "1234"
+    }
+  ],
+  "userreview": [
+    {
+      "id": "1cf6",
+      "email": "s@gmail.com",
+      "stars": 4,
+      "points": "3",
+      "detail": "gssrn",
+      "productId": 3
+    },
+    {
+      "id": "9078",
+      "email": "suman@gmail.com",
+      "stars": 3,
+      "points": "2",
+      "detail": "goood",
+      "productId": 1
+    },
+    {
+      "id": "70af",
+      "email": "d",
+      "stars": 2,
+      "points": "2",
+      "detail": "xsxs",
+      "productId": 2
+    },
+    {
+      "id": "3d99",
+      "email": "suman",
+      "stars": 5,
+      "points": "4",
+      "detail": "cvs",
+      "productId": 4
+    },
+    {
+      "id": "409e",
+      "email": "ette",
+      "stars": 3,
+      "points": "3",
+      "detail": "dbtd",
+      "productId": 4
+    },
+    {
+      "id": "1c57",
+      "email": "sumn",
+      "stars": 5,
+      "points": "5",
+      "detail": "3",
+      "productId": 5
+    },
+    {
+      "id": "a24c",
+      "email": "hj",
+      "stars": 4,
+      "points": "3",
+      "detail": "hgk",
+      "productId": 5
     }
   ]
 }
