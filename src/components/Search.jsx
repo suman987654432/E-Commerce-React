@@ -16,7 +16,7 @@ const Search = () => {
     useEffect(() => {
         const loadData = async () => {
             try {
-                const response = await axios.get("http://localhost:3000/smartphones");
+                const response = await axios.get("https://json-server-deploy-dp5r.onrender.com/smartphones");
                 setProData(response.data);
             } catch (error) {
                 console.error("Error fetching products:", error);
@@ -33,7 +33,7 @@ const Search = () => {
     return (
         <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "20px" }}>
             <h1 style={{ textAlign: "center", color: "#333" }}>Search Product</h1>
-            
+
             <div style={{ textAlign: "center", marginBottom: "20px" }}>
                 <label style={{ fontWeight: "bold", fontSize: "16px" }}>Enter Product Name:</label>
                 <input
@@ -70,9 +70,9 @@ const Search = () => {
                             transition: "transform 0.3s",
                             cursor: "pointer",
                         }}
-                        onMouseOver={(e) => e.currentTarget.style.transform = "scale(1.05)"}
-                        onMouseOut={(e) => e.currentTarget.style.transform = "scale(1)"}>
-                            
+                            onMouseOver={(e) => e.currentTarget.style.transform = "scale(1.05)"}
+                            onMouseOut={(e) => e.currentTarget.style.transform = "scale(1)"}>
+
                             <Card.Img
                                 variant="top"
                                 src={key.image}

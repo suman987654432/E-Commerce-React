@@ -23,7 +23,7 @@ const Login = () => {
     }
 
     try {
-      const response = await axios.get("http://localhost:3000/User");
+      const response = await axios.get("https://json-server-deploy-dp5r.onrender.com/User");
       const users = response.data;
       const validUser = users.find(
         (u) => u.email === user.email && u.password === user.password
