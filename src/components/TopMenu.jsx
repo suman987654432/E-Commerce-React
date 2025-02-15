@@ -6,7 +6,8 @@ import "../css/TopMenu.css";
 import { IoCart } from "react-icons/io5";
 import { useSelector } from "react-redux";
 import wish from "../images/wish.png";
-import logo from "../images/logo.png"
+import icon from "../images/icon.png";
+
 
 const TopMenu = () => {
   const CartData = useSelector((state) => state.mycart?.cart || []);
@@ -17,14 +18,15 @@ const TopMenu = () => {
 
 
   return (
-    <Navbar bg="dark" variant="dark" expand="lg" style={{ padding: "10px" }}>
+    <Navbar bg="dark" variant="dark" expand="lg" className="navbar fixed-top">
+
       <Container>
         <Navbar.Brand as={Link} to="/" style={{ fontWeight: "bold", fontSize: "1.5rem", color: "Highlight" }}>
           SMARTPHONE 📳 SALE
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto" style={{ fontSize: "1.1rem", gap: "15px" }}>
+          <Nav className="ms-auto" style={{ fontSize: "1.1rem", gap: "15px",  alignItems: "center" }}>
             <Nav.Link as={Link} to="/home" className="nav-link-custom">Home</Nav.Link>
             <Nav.Link as={Link} to="/search" className="nav-link-custom">Search</Nav.Link>
             <Nav.Link as={Link} to="/product" className="nav-link-custom">Product</Nav.Link>
@@ -50,7 +52,8 @@ const TopMenu = () => {
               to="/profile"
               style={{ display: "flex", alignItems: "center", textDecoration: "none", padding: "10px" }}
             >
-              <img src={logo} alt="" style={{ width: "30px", height: "30px", borderRadius: "50%" }} />
+              <img src={icon}  style={{ width: "40px", height: "40px", borderRadius: "50%", }}  />
+              {/* <img src={logo} alt="" style={{ width: "30px", height: "30px", borderRadius: "50%" }} /> */}
             </Nav.Link>
 
           </Nav>

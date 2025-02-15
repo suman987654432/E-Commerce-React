@@ -76,6 +76,7 @@ const styles = {
     width: "100%",
     maxWidth: "400px",
     margin: "50px auto",
+    marginTop: "100px",
     padding: "20px",
     boxShadow: "0px 0px 10px rgba(0,0,0,0.1)",
     borderRadius: "8px",

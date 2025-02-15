@@ -70,6 +70,7 @@ const styles = {
   container: {
     width: "100%",
     maxWidth: "400px",
+    marginTop: "100px",
     margin: "50px auto",
     padding: "20px",
     boxShadow: "0px 0px 10px rgba(0,0,0,0.1)",

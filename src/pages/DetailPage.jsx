@@ -239,6 +239,7 @@ const styles = {
         alignItems: "center",
         backgroundColor: "#f8f9fa",
         padding: "20px",
+        marginTop: "100px",
     },
     card: {
         width: "1200px",

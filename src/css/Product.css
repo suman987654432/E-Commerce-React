@@ -1,5 +1,6 @@
 .product-container {
   text-align: center;
+  
   padding: 60px 20px;
   background: linear-gradient(135deg, #f8f9fa, #e3e6e8);
 }
@@ -46,14 +47,14 @@
 
 .product-card {
   width: 100%;
-  max-width: 350px;
+  max-width: 400px;
   border-radius: 15px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
   background: white;
   overflow: hidden;
   position: relative;
-  height: 480px;
+  height: 400px;
   display: flex;
   flex-direction: column;
 }

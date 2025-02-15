@@ -159,7 +159,7 @@
       "name": "iPhone 15 Pro Max",
       "price": 75000,
       "image": "https://m.media-amazon.com/images/I/81fxjeu8fdL._SX679_.jpg",
-      "status": "pending"
+      "status": "canceled"
     },
     {
       "id": "o52d2yyta",
@@ -213,6 +213,15 @@
       "name": "Google Pixel 7 Pro",
       "price": 25000,
       "image": "https://m.media-amazon.com/images/I/61z87QgLJ0L._AC_UF1000,1000_QL80_FMwebp_.jpg",
+      "status": "pending"
+    },
+    {
+      "id": "yutbpul24",
+      "productId": "3",
+      "userEmail": "raju@gmail.com",
+      "name": "OnePlus 11 5G",
+      "price": 85000,
+      "image": "https://m.media-amazon.com/images/I/61amb0CfMGL._AC_UF1000,1000_QL80_FMwebp_.jpg",
       "status": "pending"
     }
   ]

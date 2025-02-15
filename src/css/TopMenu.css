@@ -1,8 +1,14 @@
 /* General Navbar Styling */
 .navbar {
-  background-color: #343a40 !important;
-  padding: 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: color 0.3s ease-in-out;
+  align-items: center;
+  
 }
+
 
 .navbar-brand {
   font-weight: bold;

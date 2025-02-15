@@ -16,6 +16,8 @@ import Insert from "./pages/Insert";
 import Display from "./pages/Display";
 import AdminSearch from "./pages/Search"; // Renamed to avoid conflict
 import UsePage from "./pages/UsePage";
+import OrderedPgae from "./pages/OrderedPgae";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -35,6 +37,7 @@ const App = () => {
           <Route path="registration" element={<SignUp />} />
           <Route path="login" element={<Login />} />
           <Route path="profile" element={<ProfilePage />} />
+          <Route path="footer" element={<Footer />} />
         </Route>
 
         {/* Admin Routes */}
@@ -43,6 +46,7 @@ const App = () => {
           <Route path="display" element={<Display />} />
           <Route path="search" element={<AdminSearch />} />
           <Route path="user" element={<UsePage />} />
+          <Route path="order" element={<OrderedPgae />} />
         </Route>
       </Routes>
     </BrowserRouter>

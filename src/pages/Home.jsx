@@ -1,12 +1,18 @@
+import BestProduct from "../components/BestProduct"
+import Category from "../components/Category"
+import Header from "../components/Header"
 
-import Carousel from "../components/Carousel"
 
 const Home = () => {
   return (
     <>
-      <Carousel />
-    </>
 
+      <Header />
+      <Category />
+      <BestProduct />
+     
+
+    </>
   )
 }
 
