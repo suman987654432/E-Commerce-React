@@ -6,13 +6,14 @@ import "../css/TopMenu.css";
 import { IoCart } from "react-icons/io5";
 import { useSelector } from "react-redux";
 import wish from "../images/wish.png";
+import logo from "../images/logo.png"
 
 const TopMenu = () => {
   const CartData = useSelector((state) => state.mycart?.cart || []);
   const cartLength = CartData.length;
 
   const WishData = useSelector((state) => state.wishlist?.items || []); // Fix selector
-const wishLength = WishData.length;
+  const wishLength = WishData.length;
 
 
   return (
@@ -44,6 +45,14 @@ const wishLength = WishData.length;
                 {cartLength > 0 && <span className="cart-count">{cartLength}</span>}
               </div>
             </Nav.Link>
+            <Nav.Link
+              as={Link}
+              to="/profile"
+              style={{ display: "flex", alignItems: "center", textDecoration: "none", padding: "10px" }}
+            >
+              <img src={logo} alt="" style={{ width: "30px", height: "30px", borderRadius: "50%" }} />
+            </Nav.Link>
+
           </Nav>
         </Navbar.Collapse>
       </Container>

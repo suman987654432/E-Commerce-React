@@ -21,7 +21,7 @@ const Product = () => {
   };
   const loadData = async () => {
     try {
-      const api = "https://json-server-deploy-dp5r.onrender.com/smartphones";
+      const api = "http://localhost:3000/smartphones";
       const response = await axios.get(api);
       setMydata(response.data);
       setFilteredData(response.data);

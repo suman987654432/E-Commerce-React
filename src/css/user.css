@@ -1,0 +1,8 @@
+.table-responsive {
+    overflow-x: auto;
+}
+
+.btn-danger {
+    font-size: 14px;
+    padding: 5px 10px;
+}

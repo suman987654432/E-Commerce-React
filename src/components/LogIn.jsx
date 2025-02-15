@@ -23,22 +23,22 @@ const Login = () => {
     }
 
     try {
-      const response = await axios.get("https://json-server-deploy-dp5r.onrender.com/User");
+      const response = await axios.get(`http://localhost:3000/User?email=${user.email}&password=${user.password}`);
       const users = response.data;
-      const validUser = users.find(
-        (u) => u.email === user.email && u.password === user.password
-      );
 
-      if (validUser) {
+      if (users.length > 0) {
         alert("Login Successful!");
-        navigate("/home"); // Redirect to dashboard or homepage
+        localStorage.setItem("user", JSON.stringify(users[0])); // Store user in localStorage
+        navigate("/home"); // Redirect to homepage
       } else {
         alert("Invalid email or password!");
       }
     } catch (error) {
       console.error("Error logging in:", error);
+      alert("Something went wrong. Please try again.");
     }
   };
+
 
   return (
     <div style={styles.container}>

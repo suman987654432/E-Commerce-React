@@ -1,13 +1,12 @@
-import { useLocation } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
-import { useState, useEffect } from 'react';
-import { addtoCart } from '../cartSlice';
-import { addToWishlist, removeFromWishlist } from '../WishListSlice';
-import Card from 'react-bootstrap/Card';
-import Modal from 'react-bootstrap/Modal';
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
+import { useLocation, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { useState, useEffect } from "react";
+import { addtoCart } from "../cartSlice";
+import { addToWishlist, removeFromWishlist } from "../WishListSlice";
+import Card from "react-bootstrap/Card";
+import Modal from "react-bootstrap/Modal";
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
 import { IoCart } from "react-icons/io5";
 import { FaHeart, FaRegHeart, FaStar } from "react-icons/fa";
 
@@ -18,47 +17,107 @@ const DetailPage = () => {
 
     const wishlistItems = useSelector((state) => state.wishlist.items);
     const isWishlisted = wishlistItems.some((item) => item.id === product?.id);
+
     const [reviews, setReviews] = useState([]);
     const [show, setShow] = useState(false);
-    const [review, setReview] = useState({ email: '', stars: 0, points: '', detail: '' });
+    const [review, setReview] = useState({ email: "", stars: 0, points: "", detail: "" });
 
-    if (!product) return <h2 style={{ textAlign: "center", marginTop: "50px" }}>Product not found</h2>;
     useEffect(() => {
-        fetch(`http://localhost:3000/userreview?productId=${product.id}`)
-            .then((res) => res.json())
-            .then((data) => {
-                setReviews(data);
-            })
-            .catch((err) => console.error(err));
-    }, [product.id]);
+        if (product?.id) {
+            fetchReviews();
+        }
+    },);
+
+    const fetchReviews = async () => {
+        try {
+            const response = await fetch(`http://localhost:3000/userreview?productId=${product.id}`);
+            if (!response.ok) throw new Error("Failed to fetch reviews");
+            const data = await response.json();
+            setReviews(data);
+        } catch (error) {
+            console.error("Error fetching reviews:", error);
+        }
+    };
+
+    const handlePurchase = async (product) => {
+        console.log("Product Data:", product); // ✅ Check if product has correct fields
+    
+        const user = JSON.parse(localStorage.getItem("user"));
+    
+        if (!user) {
+            alert("Please log in first.");
+            navigate("/login");
+            return;
+        }
+    
+        const orderData = {
+            id: Math.random().toString(36).slice(2, 11), 
+            productId: product.id || product._id, // ✅ Ensure productId exists
+            userEmail: user.email,
+            name: product.name,
+            price: product.price,
+            image: product.image,
+            status: "pending",
+        };
+    
+        console.log("Order Data:", orderData); // ✅ Log before sending
+    
+        try {
+            const response = await fetch("http://localhost:3000/Orders", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(orderData),
+            });
+    
+            if (!response.ok) throw new Error("Order creation failed");
+    
+            alert("Order placed successfully!");
+    
+            navigate("/profile");
+            window.location.reload();
+        } catch (error) {
+            console.error("Error processing order:", error);
+            alert("Something went wrong. Please try again.");
+        }
+    };
+    
+
+
 
     const handleStarClick = (rating) => {
         setReview((prev) => ({ ...prev, stars: rating }));
     };
 
     const handleSubmit = async () => {
-        const response = await fetch('http://localhost:3000/userreview', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ ...review, productId: product.id })
-        });
-        if (response.ok) {
-            alert('Review submitted successfully');
+        try {
+            const response = await fetch("http://localhost:3000/userreview", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ ...review, productId: product.id }),
+            });
+
+            if (!response.ok) throw new Error("Failed to submit review");
+
+            alert("Review submitted successfully");
             setShow(false);
-            setReview({ email: '', stars: 0, points: '', detail: '' });
+            setReview({ email: "", stars: 0, points: "", detail: "" });
+            fetchReviews(); // Refresh reviews after submission
+        } catch (error) {
+            console.error("Error submitting review:", error);
+            alert("Something went wrong. Please try again.");
         }
     };
+
+    if (!product) {
+        return <h2 style={{ textAlign: "center", marginTop: "50px" }}>Product not found</h2>;
+    }
+
     return (
         <div style={styles.container}>
             <Card style={styles.card}>
                 <div style={styles.content}>
                     <div style={styles.imageContainer}>
-                        <Card.Img
-                            variant="top"
-                            src={product.image}
-                            style={styles.image}
-                            alt={product.name}
-                        />
+                        <Card.Img variant="top" src={product.image} style={styles.image} alt={product.name} />
                     </div>
                     <Card.Body style={styles.info}>
                         <Card.Title style={styles.name}>{product.name}</Card.Title>
@@ -71,10 +130,7 @@ const DetailPage = () => {
                             >
                                 <IoCart /> Add Cart
                             </button>
-                            <button
-                                style={styles.buyButton}
-                                onClick={() => navigate("/checkout", { state: product })}
-                            >
+                            <button style={styles.buyButton} onClick={() => handlePurchase(product)}>
                                 Buy Now
                             </button>
                             <button
@@ -105,9 +161,7 @@ const DetailPage = () => {
                             <Form.Control
                                 type="email"
                                 value={review.email}
-                                onChange={(e) =>
-                                    setReview({ ...review, email: e.target.value })
-                                }
+                                onChange={(e) => setReview({ ...review, email: e.target.value })}
                             />
                         </Form.Group>
                         <Form.Group className="mb-3">
@@ -132,9 +186,7 @@ const DetailPage = () => {
                             <Form.Control
                                 type="text"
                                 value={review.points}
-                                onChange={(e) =>
-                                    setReview({ ...review, points: e.target.value })
-                                }
+                                onChange={(e) => setReview({ ...review, points: e.target.value })}
                             />
                         </Form.Group>
                         <Form.Group className="mb-3">
@@ -143,9 +195,7 @@ const DetailPage = () => {
                                 as="textarea"
                                 rows={3}
                                 value={review.detail}
-                                onChange={(e) =>
-                                    setReview({ ...review, detail: e.target.value })
-                                }
+                                onChange={(e) => setReview({ ...review, detail: e.target.value })}
                             />
                         </Form.Group>
                     </Form>
@@ -154,11 +204,7 @@ const DetailPage = () => {
                     <Button variant="secondary" onClick={() => setShow(false)}>
                         Close
                     </Button>
-                    <Button
-                        variant="primary"
-                        onClick={handleSubmit}
-                        style={styles.submitReviewButton}
-                    >
+                    <Button variant="primary" onClick={handleSubmit} style={styles.submitReviewButton}>
                         Submit Review
                     </Button>
                 </Modal.Footer>
@@ -184,6 +230,7 @@ const DetailPage = () => {
         </div>
     );
 };
+
 
 const styles = {
     container: {

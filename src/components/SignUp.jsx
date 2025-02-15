@@ -24,7 +24,7 @@ const SignUp = () => {
     }
 
     try {
-      await axios.post("https://json-server-deploy-dp5r.onrender.com/User", user);
+      await axios.post("http://localhost:3000/User", user);
       alert("Registration Successful!");
       navigate("/login");
     } catch (error) {

@@ -16,7 +16,7 @@ const Search = () => {
     useEffect(() => {
         const loadData = async () => {
             try {
-                const response = await axios.get("https://json-server-deploy-dp5r.onrender.com/smartphones");
+                const response = await axios.get("http://localhost:3000/smartphones");
                 setProData(response.data);
             } catch (error) {
                 console.error("Error fetching products:", error);

@@ -82,7 +82,7 @@
     },
     {
       "id": "11",
-      "name": "Motorola Edge 40",
+      "name": "Motorola Edge",
       "category": "Motorola",
       "description": "6.67-inch OLED, Snapdragon 8 Gen 2, 165Hz refresh rate, 125W fast charging.",
       "image": "https://m.media-amazon.com/images/I/715aoVxQNTL._AC_SL1500_.jpg",
@@ -91,12 +91,21 @@
   ],
   "User": [
     {
-      "id": "db23"
-    },
-    {
       "id": "d014",
       "name": "Suman Singh",
       "email": "sumitqaj9876@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "cd24",
+      "name": "Suman Singh",
+      "email": "raju@gmail.com",
+      "password": "12345"
+    },
+    {
+      "id": "089c",
+      "name": "Anushka",
+      "email": "anu@gmail.com",
       "password": "1234"
     }
   ],
@@ -134,28 +143,77 @@
       "productId": 4
     },
     {
-      "id": "409e",
-      "email": "ette",
-      "stars": 3,
-      "points": "3",
-      "detail": "dbtd",
-      "productId": 4
-    },
-    {
-      "id": "1c57",
-      "email": "sumn",
-      "stars": 5,
-      "points": "5",
-      "detail": "3",
-      "productId": 5
-    },
-    {
-      "id": "a24c",
-      "email": "hj",
+      "id": "99b6",
+      "email": "suman@gmail.com",
       "stars": 4,
       "points": "3",
-      "detail": "hgk",
-      "productId": 5
+      "detail": "sqjkj",
+      "productId": "7"
+    }
+  ],
+  "Orders": [
+    {
+      "id": "187p2x8y7",
+      "productId": "1",
+      "userEmail": "raju@gmail.com",
+      "name": "iPhone 15 Pro Max",
+      "price": 75000,
+      "image": "https://m.media-amazon.com/images/I/81fxjeu8fdL._SX679_.jpg",
+      "status": "pending"
+    },
+    {
+      "id": "o52d2yyta",
+      "productId": "4",
+      "userEmail": "raju@gmail.com",
+      "name": "Google Pixel 7 Pro",
+      "price": 25000,
+      "image": "https://m.media-amazon.com/images/I/61z87QgLJ0L._AC_UF1000,1000_QL80_FMwebp_.jpg",
+      "status": "pending"
+    },
+    {
+      "id": "cipsglr0j",
+      "productId": "3",
+      "userEmail": "raju@gmail.com",
+      "name": "OnePlus 11 5G",
+      "price": 85000,
+      "image": "https://m.media-amazon.com/images/I/61amb0CfMGL._AC_UF1000,1000_QL80_FMwebp_.jpg",
+      "status": "pending"
+    },
+    {
+      "id": "nsbvjvwts",
+      "productId": "2",
+      "userEmail": "anand@gmamil.com",
+      "name": "Samsung Galaxy S23 Ultra",
+      "price": 45000,
+      "image": "https://m.media-amazon.com/images/I/61sU8OqBs4L._AC_UF1000,1000_QL80_FMwebp_.jpg",
+      "status": "pending"
+    },
+    {
+      "id": "rbkm462zl",
+      "productId": "b84a",
+      "userEmail": "anand@gmamil.com",
+      "name": "suman kumar ",
+      "price": "222",
+      "image": "https://m.media-amazon.com/images/I/61amb0CfMGL._AC_UF1000,1000_QL80_FMwebp_.jpg",
+      "status": "pending"
+    },
+    {
+      "id": "tuxc5cdnr",
+      "productId": "1",
+      "userEmail": "anand@gmamil.com",
+      "name": "iPhone 15 Pro Max",
+      "price": 75000,
+      "image": "https://m.media-amazon.com/images/I/81fxjeu8fdL._SX679_.jpg",
+      "status": "pending"
+    },
+    {
+      "id": "5zglaxnzv",
+      "productId": "4",
+      "userEmail": "anu@gmail.com",
+      "name": "Google Pixel 7 Pro",
+      "price": 25000,
+      "image": "https://m.media-amazon.com/images/I/61z87QgLJ0L._AC_UF1000,1000_QL80_FMwebp_.jpg",
+      "status": "pending"
     }
   ]
 }

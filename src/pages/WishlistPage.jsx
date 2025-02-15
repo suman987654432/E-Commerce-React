@@ -8,7 +8,7 @@ const WishlistPage = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate(); // Hook for navigation
 
- 
+
   return (
     <div style={styles.container}>
       <h1 style={styles.heading}>Your Wishlist ❤️</h1>
@@ -45,11 +45,12 @@ const WishlistPage = () => {
                 <td style={styles.td}>
                   <button
                     style={styles.removeButton}
-                    onClick={() => dispatch(removeFromWishlist(product.id))}
+                    onClick={() => dispatch(removeFromWishlist({ id: product.id }))}
                   >
                     <FaTrash /> Remove
                   </button>
                 </td>
+
               </tr>
             ))}
           </tbody>
